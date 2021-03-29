@@ -1,27 +1,48 @@
 'use strict';
 
 const express = require('express');
-const bodyParser = require('body-parser');
 
-// Constants
+// const classicLove = require('./calculators/classicLove');
+const fakeCalculator1 = require('./calculators/calculator1');
+const fakeCalculator2 = require('./calculators/calculator2');
+const fakeCalculator3 = require('./calculators/calculator3');
+
+const logger = require('./logger');
+
+const calculators = [
+	{"weight": 0.2, "fn": fakeCalculator1}, 
+	{"weight": 0.5, "fn": fakeCalculator2}, 
+	{"weight": 0.3, "fn": fakeCalculator3}
+];
+
 const PORT = 3000;
 const HOST = '0.0.0.0';
 
-// App
 const app = express();
 
-app.use(bodyParser.json());
-
-app.get('/', (req, res) => {
-	res.send('Hello remote worldfff!\n');
-});
+app.use(express.json());
 
 app.post('/', (req, res) => {
-    console.log('Got body:', req.body);
-	var username = req.body.username;
-	var password = req.body.password;
-	var msg = `username:${username}, password:${password}`;
-	res.json({"foo": "bar", "msg": msg});
+
+	const personOne = req.body.personOne;
+	const personTwo = req.body.personTwo;
+
+	const msg = `input was name1:${personOne.name}, name2:${personTwo.name}`;
+	logger.info('msg:'+msg)
+
+	let totalScore = 0;
+
+	for (const calculator of calculators) {
+		const scoreObj = calculator.fn.getScore(personOne, personTwo);
+		const scorePercentage = scoreObj.score/scoreObj.maximum;
+		const weightedScorePercentage = scorePercentage * calculator.weight;
+		logger.info(`scorePercentage:${scorePercentage}, weight:${calculator.weight}, weightedScorePercentage:${weightedScorePercentage}`);
+		totalScore = totalScore + weightedScorePercentage;
+	}
+
+	const roundedTotalScore = totalScore.toFixed(3);
+
+	res.json({"result": roundedTotalScore});
 });
 
 

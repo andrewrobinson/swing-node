@@ -1,14 +1,42 @@
 * THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API - Coding Assesment (BE)
 
+TODO  - add Chai or Jest
+
+
 Submission by Andrew Robinson
 
+I decided that the post body input should look like the below for now. 
+
+~~~json
+{
+	"personOne": {
+		"name": "Andrew"
+	},
+	"personTwo": {
+		"name": "Ruth"
+	}
+}
+~~~
+
+The above means that love calculator 1 will evaluate "Andrew loves Ruth"
+I would be surprised if other calculators didn't need a date of birth or surname, so that can be easily added.
+
+Here is a curl:
 
 ~~~~
-
-curl -vH "Content-Type: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/ 
-
-curl --header "Content-Type: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/
+curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Andrew"},"personTwo": {"name": "Ruth" }}' http://localhost:3000/ 
 ~~~~
+
+
+* Typo in instructions
+
+because we haven't made up our made about a few things yet
+
+should be:
+
+because we haven't made up our mind about a few things yet
+
+
 
 
 ~~~~
