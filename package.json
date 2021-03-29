@@ -1,5 +1,5 @@
 {
-  "name": "swing node",
+  "name": "swing test",
   "version": "1.0.0",
   "description": "Find out your love compatibility",
   "author": "Andrew Robinson <andrewmcrobinson@gmail.com>",
@@ -9,6 +9,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.17.1"
   }
 }
