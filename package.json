@@ -1,14 +1,18 @@
 {
-  "name": "swing test",
+  "name": "swingtest",
   "version": "1.0.0",
   "description": "Find out your love compatibility",
   "author": "Andrew Robinson <andrewmcrobinson@gmail.com>",
   "main": "server.js",
   "private": true,
   "scripts": {
+    "test": "mocha './**/*.test.js'",
     "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
   }
 }

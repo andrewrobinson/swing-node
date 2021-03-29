@@ -24,8 +24,20 @@ I would be surprised if other calculators didn't need a date of birth or surname
 Here is a curl:
 
 ~~~~
+
+curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"personTwo": {"name": "James" }}' http://localhost:3000/ 
+
+should give 86%
+
 curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Andrew"},"personTwo": {"name": "Ruth" }}' http://localhost:3000/ 
 ~~~~
+
+
+* Testing
+
+https://developer.ibm.com/languages/node-js/tutorials/learn-nodejs-unit-testing-in-nodejs/
+
+
 
 
 * Typo in instructions

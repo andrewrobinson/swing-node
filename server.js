@@ -38,12 +38,14 @@ app.post('/', (req, res) => {
 	}
 
 	const roundedTotalScore = totalScore.toFixed(3);
-
-	res.json({
+	const returnObj = {
 		"personOne": personOne,
 		"personTwo": personTwo,
 		"result": roundedTotalScore
-	});
+	}
+
+	res.json(returnObj);
+
 });
 
 app.listen(PORT, HOST);
