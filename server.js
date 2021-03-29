@@ -13,6 +13,7 @@ app.use(express.json());
 app.post('/', (req, res) => {
 	const personOne = req.body.personOne;
 	const personTwo = req.body.personTwo;
+	//TODO - could add validate body and return http 400 if no personOne.name, personTwo.name
 	res.json(handler.handlePost(personOne, personTwo));
 });
 
