@@ -1,89 +1,34 @@
-# Try Out Development Containers: Node.js
+* THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API - Coding Assesment (BE)
+Submission by Andrew Robinson
 
-A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with **[GitHub Codespaces](https://github.com/features/codespaces)** or **[Visual Studio Code Remote - Containers](https://aka.ms/vscode-remote/containers)**.
 
-This is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
-
-> **Note:** If you already have a Codespace or dev container, you can jump to the [Things to try](#things-to-try) section.
-
-## Setting up the development container
-
-### GitHub Codespaces
-Follow these steps to open this sample in a Codespace:
-1. Click the Code drop-down menu and select the **Open with Codespaces** option.
-1. Select **+ New codespace** at the bottom on the pane.
-
-For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
+~~~~
+THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API - Coding Assesment (BE)
+THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API
+In this assessment the objective is to develop an initial REST API with a single method. Please use NodeJs for this.
+The method will accept some data and multiple calculations will be performed on that data. The result of each calculation will be multiplied by a weight, and the sum of the weighted scores will be returned as a result.
+We haven't made up our mind about it yet, but we think that in the final version the calculators are
+1. Classic love compatibility with a weight of 0.2
+2. A bijective function using the OCEAN personality test scores of both persons with a weight of 0.5
+3. A bijective function using the dimorphic differences of both persons with a weight of 0.3
+Test scores are normalised before being fed into an aggregator function.
+Example
+Calculator 1 returned a score of 89 out of a maximum of 100 Calculator 2 returned a score of 100 out of a maximum score of 200 Calculator 3 returned a score of 0 out of a maximum of 6.
+The normalised scores are 0.89 and 0.50.
+The aggregator will perform this calculation --> 0.89 x 0.2 + 0.5 x 0.5 + 0.0 x 0.3 = 0.428 Your API method must then contain in its result the number 0.428 .
+The Task
+Since we don't want candidates to spend too much time on this assessment, in this version we want you to implement the first calculator. You can find a link to a paper demo below. You may check your implementation using one of the many online calculators available as well. We provide two videos where the first calculator is implemented by hand.
   
-### VS Code Remote - Containers
-Follow these steps to open this sample in a container using the VS Code Remote - Containers extension:
-
-1. If this is your first time using a development container, please ensure your system meets the pre-reqs (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
-
-2. To use this repository, you can either open the repository in an isolated Docker volume:
-
-    - Press <kbd>F1</kbd> and select the **Remote-Containers: Try a Sample...** command.
-    - Choose the "Node" sample, wait for the container to start, and try things out!
-        > **Note:** Under the hood, this will use the **Remote-Containers: Clone Repository in Container Volume...** command to clone the source code in a Docker volume instead of the local filesystem. [Volumes](https://docs.docker.com/storage/volumes/) are the preferred mechanism for persisting container data.
-
-    Or open a locally cloned copy of the code:
-
-   - Clone this repository to your local filesystem.
-   - Press <kbd>F1</kbd> and select the **Remote-Containers: Open Folder in Container...** command.
-   - Select the cloned copy of this folder, wait for the container to start, and try things out!
-
-## Things to try
-
-Once you have this sample opened, you'll be able to work with it like you would locally.
-
-> **Note:** This container runs as a non-root user with sudo access by default. Comment out `"remoteUser": "node"` in `.devcontainer/devcontainer.json` if you'd prefer to run as root.
-
-Some things to try:
-
-1. **Edit:**
-   - Open `server.js`
-   - Try adding some code and check out the language features. 
-   - Notice that `eslint` and the `vscode-eslint` extension are already installed in the container since the `.devcontainer/devcontainer.json` lists `"dbaeumer.vscode-eslint"` as an extension to install automatically when the container is created.
-2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
-3. **Build, Run, and Debug:**
-   - Open `server.js`
-   - Add a breakpoint (e.g. on line 20).
-   - Press <kbd>F5</kbd> to launch the app in the container.
-   - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-   - Continue (<kbd>F5</kbd>). You can connect to the server in the container by either: 
-      - Clicking on `Open in Browser` in the notification telling you: `Your service running on port 3000 is available`.
-      - Clicking the globe icon in the 'Ports' view. The 'Ports' view gives you an organized table of your forwarded ports, and you can access it with the command **Ports: Focus on Ports View**.
-   - Notice port 3000 in the 'Ports' view is labeled "Hello Remote World." In `devcontainer.json`, you can set `"portsAttributes"`, such as a label for your forwarded ports and the action to be taken when the port is autoforwarded.
-
-   > **Note:** In Remote - Containers, you can access your app at `http://localhost:3000` in a local browser. But in a browser-based Codespace, you must click the link from the notification or the `Ports` view so that the service handles port forwarding in the browser and generates the correct URL.
-   
-4. **Rebuild or update your container**
-
-   You may want to make changes to your container, such as installing a different version of a software or forwarding a new port. You'll rebuild your container for your changes to take effect. 
-   
-   **Forward a port statically:** As an example change, let's forward a port statically in the `.devcontainer/devcontainer.json` file. 
-     
-   > **Note:** Remote-Containers and Codespaces also take care of dynamic port forwarding, but there may be instances in which we want to statically declare a forwarded port. 
-   
-   - Open the `.devcontainer/devcontainer.json` file.
-   - Uncomment the `forwardedPorts` attribute and adjust the port number as needed.
-   - Press <kbd>F1</kbd> and select the **Remote-Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## License
-
-Copyright © Microsoft Corporation All rights reserved.<br />
-Licensed under the MIT License. See LICENSE in the project root for license information.
+Helpful information
+1. You can find a paper calculation demo of the classic compatibility scoring here https://www.youtube.com/watch?v=oFsLVG7EAZ4 and here https://www.youtube.com/watch?v=2P47bHsmqFU
+2. You do not need to develop a UI. Please don't. We will test your API using Postman and that will be good enough.
+3. Please read the instructions very carefully. While you do not need to develop any calculator but the first (we have purposely kept you in the dark about the other calculators), you do need to develop the concept of the aggregator as a minimum. You may hardcode the weights for expediency.
+4. The sum of all the weights the aggregator uses always sum up to 1.0. If there's just 1 expected input then that input has a weight of 1.00
+5. If the classic compatibility calculator returns a score over 100, use 100.
+6. It should take you about 30-45 minutes to complete the coding part of the task, but please take your time to read through what is required.
+7. If you're going to copy the calculator code from the internet (and who hasn't done that) that's fine. We respect your time and we really don't want you to re-invent the wheel. In fact if you copy it from the internet and tell us where you copied it from you make everyone's life easier.
+8. If you make any assumptions, please state these in an accompanying README file. And If you could take all the time you needed to, tell us what you would have added.
+9. The assessment will be evaluated on your ability to read the instructions, meet the requirements while still thinking ahead but not too far ahead because we haven't made up our made about a few things yet, readability and design of your code and any additional information you give per the next point.
+10. Lastly, you may put any thoughts you have about the assessment in the same README file. We would especially like to know what you think this test is about.
+Please zip your work and send it to the recruiter. Thanks
+~~~~
