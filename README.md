@@ -4,6 +4,14 @@ Submission by Andrew Robinson
 
 
 ~~~~
+
+curl -vH "Content-Type: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/ 
+
+curl --header "Content-Type: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/
+~~~~
+
+
+~~~~
 THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API - Coding Assesment (BE)
 THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API
 In this assessment the objective is to develop an initial REST API with a single method. 
