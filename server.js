@@ -27,9 +27,6 @@ app.post('/', (req, res) => {
 	const personOne = req.body.personOne;
 	const personTwo = req.body.personTwo;
 
-	const msg = `input was name1:${personOne.name}, name2:${personTwo.name}`;
-	logger.info('msg:'+msg)
-
 	let totalScore = 0;
 
 	for (const calculator of calculators) {
@@ -42,9 +39,12 @@ app.post('/', (req, res) => {
 
 	const roundedTotalScore = totalScore.toFixed(3);
 
-	res.json({"result": roundedTotalScore});
+	res.json({
+		"personOne": personOne,
+		"personTwo": personTwo,
+		"result": roundedTotalScore
+	});
 });
-
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
