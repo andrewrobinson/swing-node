@@ -4,8 +4,8 @@ const express = require('express');
 const handler = require('./handler');
 
 const classicLove = require('./calculators/classicLove');
-const fakeCalculator2 = require('./calculators/calculator2');
-const fakeCalculator3 = require('./calculators/calculator3');
+const fakeCalculator2 = require('./calculators/fake_calculator2');
+const fakeCalculator3 = require('./calculators/fake_calculator3');
 
 const PORT = 3000;
 const HOST = '0.0.0.0';

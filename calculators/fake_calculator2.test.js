@@ -1,7 +1,7 @@
 const assert = require('assert');
-const calculator = require("./calculator2")
+const calculator = require("./fake_calculator2")
 
-describe("Calculator2", function() {
+describe("Fake Calculator2", function() {
   describe("getScore", function() {
     it("should return 100 out of 200 for Mary loves James", async function() {
 
