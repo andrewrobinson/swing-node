@@ -22,11 +22,23 @@ describe("classicLove", function() {
         });
       });
 
-    //this is the next highest and could be "private" except I wanted to test from one place
+    //'calculate' is the next highest and could be "private" except for ease of testing
     describe("calculate", function() {
         it("should return 86 for Mary, James", async function() {
             assert.equal("86", calculator.calculate("Mary", "James"));
         });
+
+        it("should return 86 for James, Mary", async function() {
+            assert.equal("86", calculator.calculate("James", "Mary"));
+        });
+
+        it("should return 69 for Andrew, Ruth", async function() {
+            assert.equal("69", calculator.calculate("Andrew", "Ruth"));
+        });
+        it("should return 69 for Ruth, Andrew", async function() {
+            assert.equal("69", calculator.calculate("Ruth", "Andrew"));
+        });
+
 
     });
 

@@ -25,7 +25,7 @@ describe("Handler", function() {
   
     describe("handlePost - when set up with the return values and weights from the instructions", function() {
 
-    it("should return a result of 0.428", async function() {
+    it("should return a result of 0.428 when calculator1 returns 89/100, calculator2 returns 100/200 and calculator3 returns 0/6", async function() {
 
       const p1 = {
         "name": "Mary"

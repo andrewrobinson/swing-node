@@ -27,7 +27,6 @@ function countChars(name1, name2) {
 }
 
 function shortenNumber(str) {
-  console.log("shortenNumber called with:"+str);
   let shortenString = "";
   if (str.length >= 2) {
     const int1 = parseInt(str.charAt(0))
@@ -63,8 +62,15 @@ const classicLove = {
 
   getScore: function(personOne, personTwo) {
 
-    const percentage = calculate(personOne.name, personTwo.name);
+    let percentage = calculate(personOne.name, personTwo.name);
   
+    //because item 5) said so. I couldn't find inputs that generated > 100 though.
+    //I don't have code coverage for this. 
+    //Potentially I could mock calculate while testing this logic in getScore.
+    if (percentage > 100) {
+      percentage = 100;
+    }
+
     return {
       "calculatorName": "classicLove",
       "score": percentage,
