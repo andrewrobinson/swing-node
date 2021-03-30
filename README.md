@@ -1,31 +1,46 @@
-* THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API - Coding Assesment (BE)
+# THE UNSCIENTIFIC LOVE COMPATIBILITY CALCULATOR API - Coding Assesment
 
-Submission by Andrew Robinson
+## Submission by Andrew Robinson <andrewmcrobinson@gmail.com>
 
-
-* To run
+## To run server
+```bash
 npm start
-or nodemon server.js
+or 
+nodemon server.js
+```
 
-* To test running server with curl / Postman
-~~~~
+## To test running server with curl / Postman
+```bash
 curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"personTwo": {"name": "James" }}' http://localhost:3000/ 
-~~~~
+```
 
 This json input format is easily extensible should you need surname, date of birth etc for other calculators
 
-* To run unit tests
+## To run unit tests
+```bash
 npm test
+```
 
+## What you think this test is about
 
-* What you think this test is about
-Finding love
-Seeing if you can read and implement a spec where some requirements are not yet firmed up.
-Seeing if you have attention to detail
+* Finding love
 
-* Remarks
-This was fun but did NOT take 30 minutes. 
-Next steps would be adding something like Sinon.js for mocking, and adding typescript.
+* Seeing if you can read and implement a spec, leaving space for requirements that are not yet firmed up.
+
+* Seeing if you have attention to detail.
+
+* Seeing if you write the love calculator yourself or if you convert the Android Java to js? Or maybe there is a js version somewhere on the internet?
+
+## Remarks
+* This was fun but did NOT take 30 minutes. 
+
+* Next steps would be adding something like Sinon.js for mocking, and adding typescript.
+
+* Let me know if you want me to go further. I haven't coded typescript much yet though would be interested to see how it changes the code.
+
+ * I learnt node in the ES5 era, then have been using Scala and Golang in my most recent position. I'm hoping this is ES6 but haven't gone crazy with linters and style guides.
+
+*  What do you think of the style of my "constructors" for dependency injection? Would be interested to see how you handle that. And how you do mocking / which test framework.
 
 
 
