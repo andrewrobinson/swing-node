@@ -64,9 +64,8 @@ const classicLove = {
 
     let percentage = calculate(personOne.name, personTwo.name);
   
-    //because item 5) said so. I couldn't find inputs that generated > 100 though.
-    //I don't have code coverage for this. 
-    //Potentially I could mock calculate while testing this logic in getScore.
+    // 5. If the classic compatibility calculator returns a score over 100, use 100.
+    //To get code coverage for this I could mock calculate while testing this logic in getScore.
     if (percentage > 100) {
       percentage = 100;
     }
