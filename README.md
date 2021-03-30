@@ -34,9 +34,9 @@ npm test
 ## Remarks
 * This was fun but did NOT take 30 minutes. 
 
-* Next steps would be adding something like Sinon.js for mocking, and adding typescript.
+* Next steps would be adding something like Sinon.js for mocking, Istanbul and adding typescript.
 
-* Let me know if you want me to go further. I haven't coded typescript much yet though would be interested to see how it changes the code.
+* Let me know if you want me to go further. I haven't coded typescript much yet, though would be interested to see how it changes the code.
 
  * I learnt node in the ES5 era, then have been using Scala and Golang in my most recent position. I'm hoping this is ES6 but haven't gone crazy with linters and style guides.
 
