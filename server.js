@@ -12,15 +12,8 @@ const HOST = '0.0.0.0';
 
 const app = express();
 
-// 4. The sum of all the weights the aggregator uses always sum up to 1.0. 
-// If there's just 1 expected input then that input has a weight of 1.00
-
-//Can code this:
-// 5. If the classic compatibility calculator returns a score over 100, use 100.
-//but not sure what inputs would give > 100 so use mocking?
-
 const calculators = [
-	{"weight": 0.2, "fn": classicLove}, 
+	{"weight": 0.2, "fn": classicLove},
 	{"weight": 0.5, "fn": fakeCalculator2}, 
 	{"weight": 0.3, "fn": fakeCalculator3}
 ];
