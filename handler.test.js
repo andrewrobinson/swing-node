@@ -1,9 +1,9 @@
 const assert = require('assert');
 const handler = require("./handler")
 
-const fakeCalculator1 = require('./calculators/fake_calculator1');
-const fakeCalculator2 = require('./calculators/fake_calculator2');
-const fakeCalculator3 = require('./calculators/fake_calculator3');
+const fakeCalculator1 = require('./calculators/fake/fake_calculator1');
+const fakeCalculator2 = require('./calculators/fake/fake_calculator2');
+const fakeCalculator3 = require('./calculators/fake/fake_calculator3');
 
 describe("Handler", function() {
 
