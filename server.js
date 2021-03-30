@@ -12,8 +12,16 @@ const HOST = '0.0.0.0';
 
 const app = express();
 
-//see handler.test.js for proof of  0.89 x 0.2 + 0.5 x 0.5 + 0.0 x 0.3 = 0.428 behaviour
-//nb - Mary loves James returns 0.86 not 0.89 so if you keep the fake ones below configured you get 0.422
+/*
+
+See handler.test.js for proof of  0.89 x 0.2 + 0.5 x 0.5 + 0.0 x 0.3 = 0.428 behaviour
+
+NB - Mary loves James returns 0.86 not 0.89 so if you keep the fake ones below configured you get 0.422 when testing with
+
+curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"personTwo": {"name": "James" }}' http://localhost:3000/
+
+*/
+
 const calculators = [
 	{"weight": 0.2, "fn": classicLove},
 	{"weight": 0.5, "fn": fakeCalculator2}, 
