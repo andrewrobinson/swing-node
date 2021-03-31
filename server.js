@@ -24,8 +24,8 @@ curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"per
 
 const calculators = [
 	{"weight": 0.2, "fn": classicLove},
-	{"weight": 0.5, "fn": fakeCalculator2}, 
-	{"weight": 0.3, "fn": fakeCalculator3}
+	// {"weight": 0.5, "fn": fakeCalculator2}, 
+	// {"weight": 0.3, "fn": fakeCalculator3}
 ];
 
 const myHandler = handler(calculators);

@@ -4,6 +4,7 @@
 
 ## To run server
 ```bash
+npm install
 npm start
 or 
 nodemon server.js
@@ -14,7 +15,7 @@ nodemon server.js
 curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"personTwo": {"name": "James" }}' http://localhost:3000/ 
 ```
 
-This json input format is easily extensible should you need surname, date of birth etc for other calculators
+This json input format is easily extensible should you need surname, date of birth etc for other calculators. I chose to echo the people back in the response too.
 
 ## To run unit tests
 ```bash
@@ -42,6 +43,13 @@ npm test
 
 *  What do you think of the style of my "constructors" for dependency injection? Would be interested to see how you handle that. And how you do mocking / which test framework.
 
+* Item 9 in in your test has a typo:
+```
+because we haven't made up our made about a few things yet
 
+should read
+
+because we haven't made up our mind about a few things yet
+```
 
 
