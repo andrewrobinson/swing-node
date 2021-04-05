@@ -1,11 +1,27 @@
 'use strict';
 
-const express = require('express');
+// const express = require('express');
+// import express = require("express");
+// import { Router, Application, Request, Response} from 'express';
+
+import express from 'express'
+
 const handler = require('./handler');
 
 const classicLove = require('./calculators/classicLove');
 const fakeCalculator2 = require('./calculators/fake/fake_calculator2');
 const fakeCalculator3 = require('./calculators/fake/fake_calculator3');
+
+
+
+// - const { Router } = require('express');
+// + import { Router } from 'express';
+ 
+// - const routes = Router();
+// + export const routes = Router();
+
+
+
 
 const PORT = 3000;
 const HOST = '0.0.0.0';
