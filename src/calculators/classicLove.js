@@ -8,8 +8,8 @@ const classicLove = {
   
     // 5. If the classic compatibility calculator returns a score over 100, use 100.
     //To get code coverage for this I could mock classicLoveHelper.calculate while testing this logic in getScore.
-    if (percentage > 100) {
-      percentage = 100;
+    if (parseInt(percentage) > 100) {
+      percentage = "100";
     }
 
     return {

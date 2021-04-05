@@ -3,16 +3,24 @@
   "version": "1.0.0",
   "description": "Find out your love compatibility",
   "author": "Andrew Robinson <andrewmcrobinson@gmail.com>",
-  "main": "server.js",
+  "main": "dist/src",
+  "types": "dist/src",
+  "files": [
+    "dist"
+  ],
   "private": true,
   "scripts": {
     "test": "mocha './**/*.test.js'",
-    "start": "node src/server.js"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "mocha": "^8.3.2"
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "mocha": "^8.3.2",
+    "typescript": "^4.2.3"
   }
 }

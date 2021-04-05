@@ -53,3 +53,9 @@ because we haven't made up our mind about a few things yet
 ```
 
 
+### ts migration
+
+https://www.twilio.com/blog/move-to-typescript#ts-compiler-for-js
+
+npm run build
+npm start
