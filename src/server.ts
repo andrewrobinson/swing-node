@@ -6,7 +6,9 @@
 
 import express from 'express'
 
-const handler = require('./handler');
+import {construct} from './handler'
+
+// const handler = require('./handler');
 
 const classicLove = require('./calculators/classicLove');
 const fakeCalculator2 = require('./calculators/fake/fake_calculator2');
@@ -44,7 +46,7 @@ const calculators = [
 	// {"weight": 0.3, "fn": fakeCalculator3}
 ];
 
-const myHandler = handler(calculators);
+const myHandler = construct(calculators);
 
 app.use(express.json());
 

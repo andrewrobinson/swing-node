@@ -1,5 +1,7 @@
 const assert = require('assert');
-const handler = require("./handler")
+const construct = require("./handler")
+//servers.ts has
+// import {construct} from './handler'
 
 const fakeCalculator1 = require('./calculators/fake/fake_calculator1');
 const fakeCalculator2 = require('./calculators/fake/fake_calculator2');
@@ -21,7 +23,8 @@ describe("Handler", function() {
         ];
         
 
-    const myHandler = handler(calculators);
+    // const myHandler = construct(calculators);
+    let myHandler = construct(calculators);
   
     describe("handlePost - when set up with the return values and weights from the instructions", function() {
 
@@ -32,7 +35,7 @@ describe("Handler", function() {
       }
       const p2 = {
         "name": "James"
-      }
+      // }
                
       const ret = myHandler.handlePost(p1,p2)
       assert.equal("0.428", ret.result);

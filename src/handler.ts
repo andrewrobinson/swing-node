@@ -1,5 +1,9 @@
 
-module.exports = function (calculators) {
+// Replace each require() call with the equivalent in import syntax, 
+// every exports.* into an export and get rid of module.exports.
+
+
+export function construct (calculators) {
 
     // 4. The sum of all the weights the aggregator uses always sum up to 1.0. 
     // If there's just 1 expected input then that input has a weight of 1.00
@@ -41,4 +45,9 @@ module.exports = function (calculators) {
     };
 };
 
+
+
+// // export var greeting : string = construct;
+
+// module.exports = { default: handler }
   
