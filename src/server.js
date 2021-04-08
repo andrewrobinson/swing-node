@@ -4,7 +4,7 @@ import express from 'express';
 
 // import Custom, {Foo, url, bar} from './module.js';
 import Handler from './handler.js';
-import classicLoveHelper from './calculators/helpers/classicLoveHelper.js';
+import ClassicLoveHelper from './calculators/helpers/classicLoveHelper.js';
 import ClassicLove from './calculators/classicLove.js';
 import fakeCalculator2 from './calculators/fake/fake_calculator2.js';
 import fakeCalculator3 from './calculators/fake/fake_calculator3.js';
@@ -25,7 +25,7 @@ curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"per
 */
 
 const calculators = [
-	{"weight": 0.2, "fn": new ClassicLove(classicLoveHelper)}, //weight gets bumped to 1 if only a single calculator is enabled
+	{"weight": 0.2, "fn": new ClassicLove(new ClassicLoveHelper())}, //weight gets bumped to 1 if only a single calculator is enabled
 	// {"weight": 0.5, "fn": fakeCalculator2}, 
 	// {"weight": 0.3, "fn": fakeCalculator3}
 ];
