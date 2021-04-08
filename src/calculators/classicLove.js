@@ -4,10 +4,11 @@ module.exports = function (classicLoveHelper) {
   return {
     getScore: function(personOne, personTwo) {
 
+      //percentage comes back as a string
       let percentage = classicLoveHelper.calculate(personOne.name, personTwo.name);
     
       // 5. If the classic compatibility calculator returns a score over 100, use 100.
-      //To get code coverage for this I could mock classicLoveHelper.calculate while testing this logic in getScore.
+
       if (percentage > 100) {
         percentage = 100;
       }

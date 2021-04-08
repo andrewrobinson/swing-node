@@ -44,7 +44,7 @@ function calculate(str1, str2) {
   do {
     shortString = shortenNumber(shortString);
   } while (shortString.length > 2);
-  return shortString;
+  return parseInt(shortString);
 }
 
 const classicLoveHelper = {
