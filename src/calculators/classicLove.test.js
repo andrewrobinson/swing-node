@@ -1,7 +1,8 @@
-const assert = require('assert');
-const calculator = require("./classicLove")
-const calculatorHelper = require("./helpers/classicLoveHelper")
-const sinon = require("sinon");
+import assert from 'assert';
+import calculator from "./classicLove.js";
+import calculatorHelper from "./helpers/classicLoveHelper.js";
+// const sinon = require("sinon");
+
 
 describe("classicLove", function() {
 

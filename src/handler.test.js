@@ -1,9 +1,9 @@
-const assert = require('assert');
-const handler = require("./handler")
+import assert from 'assert';
+import handler from './handler.js';
 
-const fakeCalculator1 = require('./calculators/fake/fake_calculator1');
-const fakeCalculator2 = require('./calculators/fake/fake_calculator2');
-const fakeCalculator3 = require('./calculators/fake/fake_calculator3');
+import fakeCalculator1 from './calculators/fake/fake_calculator1.js';
+import fakeCalculator2 from './calculators/fake/fake_calculator2.js';
+import fakeCalculator3 from './calculators/fake/fake_calculator3.js';
 
 describe("Handler", function() {
 

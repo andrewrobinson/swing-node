@@ -1,4 +1,4 @@
-export default calculator1 = {
+const calculator1 = {
 
     getScore: function(personOne, personTwo) {
       return {
@@ -10,5 +10,5 @@ export default calculator1 = {
   
   }
   
-  module.exports = calculator1;
+  export default calculator1;
   

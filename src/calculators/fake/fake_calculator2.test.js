@@ -1,5 +1,5 @@
-const assert = require('assert');
-const calculator = require("./fake_calculator2")
+import assert from 'assert';
+import calculator from './fake_calculator2.js'
 
 describe("Fake Calculator2", function() {
   describe("getScore", function() {

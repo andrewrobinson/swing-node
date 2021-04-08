@@ -1,5 +1,5 @@
-const assert = require('assert');
-const calculator = require("./classicLoveHelper")
+import assert from 'assert';
+import calculator from './classicLoveHelper.js'
 
 describe("classicLoveHelper", function() {
 
