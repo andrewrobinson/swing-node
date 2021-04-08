@@ -1,14 +1,14 @@
 import assert from 'assert';
-import calculator from "./classicLove.js";
+import ClassicLove from "./classicLove.js";
 import calculatorHelper from "./helpers/classicLoveHelper.js";
-// const sinon = require("sinon");
+import sinon from "sinon";
 
 
 describe("classicLove", function() {
 
     describe("getScore", function() {
 
-      const calc = calculator(calculatorHelper);
+      const calc = new ClassicLove(calculatorHelper);
 
         it("should return a score of 86 out of 100 for objects with name: Mary and name: James", async function() {
     
@@ -41,7 +41,7 @@ describe("classicLove", function() {
               }
             }
 
-            const calcu = calculator(stubbedCalculatorHelper);
+            const calcu = new ClassicLove(stubbedCalculatorHelper);
       
             const p1 = {
               "name": "Mary"
