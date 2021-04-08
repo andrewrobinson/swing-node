@@ -10,4 +10,4 @@ const calculator2 = {
 
 }
 
-module.exports = calculator2;
+export default calculator2;

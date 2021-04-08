@@ -57,6 +57,6 @@ const classicLoveHelper = {
 
 }
 
-module.exports = classicLoveHelper;
+export default classicLoveHelper;
 
 

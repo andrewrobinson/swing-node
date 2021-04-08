@@ -1,5 +1,5 @@
 
-module.exports = function (classicLoveHelper) {
+export default function (classicLoveHelper) {
 
   return {
     getScore: function(personOne, personTwo) {

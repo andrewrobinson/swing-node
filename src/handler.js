@@ -1,5 +1,5 @@
 
-module.exports = function (calculators) {
+export default function (calculators) {
 
     // 4. The sum of all the weights the aggregator uses always sum up to 1.0. 
     // If there's just 1 expected input then that input has a weight of 1.00

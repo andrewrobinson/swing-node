@@ -1,4 +1,4 @@
-const calculator1 = {
+export default calculator1 = {
 
     getScore: function(personOne, personTwo) {
       return {
