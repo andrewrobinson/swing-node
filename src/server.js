@@ -16,8 +16,8 @@ const app = express();
 
 See handler.test.js for proof of  0.89 x 0.2 + 0.5 x 0.5 + 0.0 x 0.3 = 0.428 behaviour
 
-NB - Mary loves James returns 0.86 not 0.89 so if you have the fake ones below configured you get 0.422 when testing with
-
+NB - Mary loves James returns 0.86 not 0.89 so if you have the fake ones below configured
+you get 0.422 when testing with
 curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"personTwo": {"name": "James" }}' http://localhost:3000/
 
 */
@@ -35,14 +35,6 @@ app.use(express.json());
 app.post('/', (req, res) => {
   const { personOne } = req.body;
   const { personTwo } = req.body;
-
-  // const square = new Rectangle(10, 10);
-  // console.log(`XXX square area: ${square.area}`); // 100
-  // const custom = new Custom();
-  // const foo = new Foo();
-  // bar();
-  // console.log(url);
-
   res.json(myHandler.handlePost(personOne, personTwo));
 });
 
