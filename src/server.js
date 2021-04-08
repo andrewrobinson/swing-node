@@ -3,6 +3,7 @@
 const express = require('express');
 const handler = require('./handler');
 
+const classicLoveHelper = require('./calculators/helpers/classicLoveHelper');
 const classicLove = require('./calculators/classicLove');
 const fakeCalculator2 = require('./calculators/fake/fake_calculator2');
 const fakeCalculator3 = require('./calculators/fake/fake_calculator3');
@@ -23,7 +24,7 @@ curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"per
 */
 
 const calculators = [
-	{"weight": 0.2, "fn": classicLove}, //weight gets bumped to 1 if only a single calculator is enabled
+	{"weight": 0.2, "fn": classicLove(classicLoveHelper)}, //weight gets bumped to 1 if only a single calculator is enabled
 	// {"weight": 0.5, "fn": fakeCalculator2}, 
 	// {"weight": 0.3, "fn": fakeCalculator3}
 ];
