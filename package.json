@@ -5,6 +5,7 @@
   "author": "Andrew Robinson <andrewmcrobinson@gmail.com>",
   "main": "server.js",
   "private": true,
+  "type": "module",
   "scripts": {
     "test": "mocha 'src/**/*.test.js'",
     "start": "node src/server.js"
