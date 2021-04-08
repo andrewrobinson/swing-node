@@ -1,5 +1,5 @@
 import assert from 'assert';
-import handler from './handler.js';
+import Handler from './handler.js';
 
 import fakeCalculator1 from './calculators/fake/fake_calculator1.js';
 import fakeCalculator2 from './calculators/fake/fake_calculator2.js';
@@ -21,7 +21,7 @@ describe("Handler", function() {
         ];
         
 
-    const myHandler = handler(calculators);
+    const myHandler = new Handler(calculators);
   
     describe("handlePost - when set up with the return values and weights from the instructions", function() {
 

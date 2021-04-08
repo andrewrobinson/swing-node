@@ -5,7 +5,7 @@
 
 import express from 'express';
 
-import handler from './handler.js';
+import Handler from './handler.js';
 import classicLoveHelper from './calculators/helpers/classicLoveHelper.js';
 import classicLove from './calculators/classicLove.js';
 import fakeCalculator2 from './calculators/fake/fake_calculator2.js';
@@ -28,11 +28,11 @@ curl -H "Content-Type: application/json" -d '{"personOne": {"name": "Mary"},"per
 
 const calculators = [
 	{"weight": 0.2, "fn": classicLove(classicLoveHelper)}, //weight gets bumped to 1 if only a single calculator is enabled
-	{"weight": 0.5, "fn": fakeCalculator2}, 
-	{"weight": 0.3, "fn": fakeCalculator3}
+	// {"weight": 0.5, "fn": fakeCalculator2}, 
+	// {"weight": 0.3, "fn": fakeCalculator3}
 ];
 
-const myHandler = handler(calculators);
+const myHandler = new Handler(calculators);
 
 app.use(express.json());
 
