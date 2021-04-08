@@ -41,6 +41,5 @@ describe("Handler", function() {
       assert.equal("0.428", ret.result);
 
     });
-
   });
 });
