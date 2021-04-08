@@ -32,11 +32,12 @@ describe("classicLove", function() {
 
           it("should return a score of 100 out of 100 when calculatorHelper returns > 100", async function() {
 
+            // https://stackoverflow.com/questions/21072016/stubbing-a-class-method-with-sinon-js
             const helperStub = new ClassicLoveHelper()
             sinon.stub(helperStub, 'calculate').callsFake(() => "250");
             // sinon.stub(helper, 'calculate').returns("250")
 
-            const calcu = new ClassicLove(helperStub);
+            const calc = new ClassicLove(helperStub);
       
             const p1 = {
               "name": "Mary"
@@ -45,14 +46,12 @@ describe("classicLove", function() {
               "name": "James"
             }
                      
-            const ret = calcu.getScore(p1,p2)
+            const ret = calc.getScore(p1,p2)
       
             assert.equal(100, ret.score);
             assert.equal(100, ret.maximum);
       
           });
         });
-
-
 
 });
