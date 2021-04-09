@@ -1,4 +1,4 @@
-// module.js
+/* eslint-disable */// module.js
 export default class {
   constructor() {
     console.log('GOOD');

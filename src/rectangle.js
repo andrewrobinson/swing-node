@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default class Rectangle {
   constructor(height, width) {
 	  this.height = height;

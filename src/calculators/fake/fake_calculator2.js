@@ -1,3 +1,4 @@
+/* eslint-disable */
 const calculator2 = {
 
   getScore(personOne, personTwo) {

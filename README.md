@@ -41,8 +41,6 @@ npm test
 
  * I learnt node in the ES5 era, then have been using Scala and Golang in my most recent position. I'm hoping this is ES6 but haven't gone crazy with linters and style guides.
 
-*  What do you think of the style of my "constructors" for dependency injection? Would be interested to see how you handle that. And how you do mocking / which test framework.
-
 * Item 9 in in your test has a typo:
 ```
 because we haven't made up our made about a few things yet

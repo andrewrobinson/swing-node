@@ -1,6 +1,7 @@
 import assert from 'assert';
 import calculator from './fake_calculator2.js';
 
+/* eslint-disable */
 describe('Fake Calculator2', () => {
   describe('getScore', () => {
     it('should return 100 out of 200 for Mary loves James', async () => {
