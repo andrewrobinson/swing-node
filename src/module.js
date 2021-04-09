@@ -1,18 +1,18 @@
-//module.js
+// module.js
 export default class {
-    constructor() {
-      console.log("GOOD");
-    }
+  constructor() {
+    console.log('GOOD');
   }
-  
-  export class Foo {
-    constructor() {
-      console.log("FOO");
-    }
+}
+
+export class Foo {
+  constructor() {
+    console.log('FOO');
   }
-  
-  export const url = "http://www.kaplankomputing.com";
-  
-  export function bar() {
-    console.log("bar");
-  }
+}
+
+export const url = 'http://www.kaplankomputing.com';
+
+export function bar() {
+  console.log('bar');
+}
