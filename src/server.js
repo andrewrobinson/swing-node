@@ -1,6 +1,5 @@
 import express from 'express';
 
-// import Custom, {Foo, url, bar} from './module.js';
 import Handler from './handler.js';
 import ClassicLoveHelper from './calculators/helpers/classicLoveHelper.js';
 import ClassicLove from './calculators/classicLove.js';
