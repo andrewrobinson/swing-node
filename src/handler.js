@@ -20,7 +20,6 @@ export default class Handler {
     this.calculators = calculators;
   }
 
-  // Method
   handlePost(personOne, personTwo) {
     let totalScore = 0;
 
